@@ -209,8 +209,6 @@ void event_configure(XEvent *ev)
     window_changes.sibling = configure_event->above;
     window_changes.stack_mode = configure_event->detail;
 
-    Window frame = {0}; // Find frame from window
-
     XConfigureWindow(wm.dpy, configure_event->window,
             configure_event->value_mask, &window_changes);
 /*
@@ -233,7 +231,9 @@ void event_configure(XEvent *ev)
 }
 
 void event_reparent(XEvent *ev)
-{}
+{
+    (void)ev;
+}
 
 void motion_notify(XEvent* ev)
 {
@@ -297,6 +297,7 @@ void button_press(XEvent* ev)
 
 void button_release(XEvent* ev)
 {
+    (void)ev;
     LOG("\"unclick\"");
     wm.focus = 0;
     wm.diff.subwindow = None;
