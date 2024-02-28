@@ -11,7 +11,7 @@ This is a pretty simple window manager. It exists soley for testing purposes.
 - Middle mouse button - Close window
 
 ### Running:
-Xephyr(a nested X server) is used to run this experimental WM. It is built with [wiz_build](https://github.com/RockRottenSalad/wiz-build). By default wiz_build uses clang, but it can be changed to GCC or CC by simple editing the macro definition inside wiz_build.c
+Xephyr(a nested X server) is used to run this experimental WM. It is built with [wiz_build](https://github.com/RockRottenSalad/wiz-build). By default wiz_build uses clang, but it can be changed to GCC or CC by simply editing the macro definition inside wiz_build.c
 
 ```
 cc ./wiz_build.c -o wiz_build
